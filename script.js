@@ -114,11 +114,6 @@ function initAnimations() {
         });
     }, observerOptions);
 
-    // Observer tous les éléments avec les classes d'animation
-    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
-        observer.observe(el);
-    });
-
     // Ajouter les classes d'animation aux éléments
     document.querySelectorAll('.section-title').forEach(el => {
         el.classList.add('fade-in');
@@ -137,6 +132,11 @@ function initAnimations() {
     document.querySelectorAll('.certificate-card').forEach((el, index) => {
         el.classList.add('fade-in');
         el.style.transitionDelay = `${index * 0.15}s`;
+    });
+
+    // Observer tous les éléments avec les classes d'animation
+    document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+        observer.observe(el);
     });
 }
 

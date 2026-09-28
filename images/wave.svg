@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="120" viewBox="0 0 1200 120" fill="none" stroke="#2f8fe0" stroke-linecap="round">
+  <g stroke-width="1" opacity="0.5">
+    <path d="M0 60 H1200"/>
+    <path d="M0 20 H1200 M0 100 H1200" stroke-dasharray="2 10"/>
+  </g>
+  <path stroke-width="2" d="M0 60 C50 0 100 0 150 60 S250 120 300 60 S400 0 450 60 S550 120 600 60 S700 0 750 60 S850 120 900 60 S1000 0 1050 60 S1150 120 1200 60"/>
+</svg>

@@ -80,12 +80,13 @@ body {
 }
 
 .nav-logo .logo-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
+    font-family: 'Grand Hotel', 'Billabong', 'Brush Script MT', cursive;
+    font-size: 2.4rem;
+    font-weight: 400;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
-    text-transform: lowercase;
+    letter-spacing: 0;
+    text-transform: none;
+    line-height: 1;
 }
 
 .nav-menu {
@@ -333,8 +334,6 @@ body {
 }
 
 .btn-outline:hover {
-    background: var(--text-primary);
-    color: var(--bg-primary);
     transform: translateY(-2px);
 }
 
@@ -360,34 +359,27 @@ body {
 .image-frame {
     position: relative;
     width: 300px;
-    height: 300px;
+    height: 360px;
     margin: 0 auto;
 }
 
 .profile-image {
     width: 100%;
     height: 100%;
-    background: var(--bg-card);
-    border: 3px solid var(--border-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    color: var(--text-primary);
+    background: #ffffff;
+    border: 3px solid var(--accent-color);
+    border-radius: 28px;
+    box-shadow: 14px 14px 0 var(--accent-soft), var(--shadow-medium);
     position: relative;
     overflow: hidden;
 }
 
-.profile-image::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(from 0deg, transparent, var(--accent-soft), transparent);
-    animation: rotate 4s linear infinite;
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .floating-icons {
@@ -413,41 +405,12 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
-.floating-icon:nth-child(1) {
-    top: 10%;
-    left: 10%;
-    animation-delay: 0s;
-}
-
-.floating-icon:nth-child(2) {
-    top: 20%;
-    right: 10%;
-    animation-delay: 1s;
-}
-
-.floating-icon:nth-child(3) {
-    bottom: 30%;
-    left: 5%;
-    animation-delay: 2s;
-}
-
-.floating-icon:nth-child(4) {
-    bottom: 10%;
-    right: 20%;
-    animation-delay: 3s;
-}
-
-.floating-icon:nth-child(5) {
-    top: 50%;
-    left: -10%;
-    animation-delay: 4s;
-}
-
-.floating-icon:nth-child(6) {
-    top: 60%;
-    right: -5%;
-    animation-delay: 5s;
-}
+.floating-icon:nth-child(1) { top: 6%;  left: -32px;  animation-delay: 0s; }
+.floating-icon:nth-child(2) { top: 14%; right: -36px; animation-delay: 1s; }
+.floating-icon:nth-child(3) { top: 42%; left: -40px;  animation-delay: 2s; }
+.floating-icon:nth-child(4) { top: 50%; right: -42px; animation-delay: 3s; }
+.floating-icon:nth-child(5) { bottom: 8%; left: -28px; animation-delay: 4s; }
+.floating-icon:nth-child(6) { bottom: 4%; right: -34px; animation-delay: 5s; }
 
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -2038,8 +2001,9 @@ section {
 }
 
 .footer-logo .logo-text {
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-family: 'Grand Hotel', 'Billabong', 'Brush Script MT', cursive;
+    font-size: 2.2rem;
+    font-weight: 400;
     color: var(--text-primary);
     margin-bottom: 1rem;
     display: block;
@@ -2349,11 +2313,15 @@ section {
         font-size: 1.25rem;
     }
     
-    .image-container,
-    .profile-image {
+    .image-container {
         width: 250px;
         height: 250px;
         font-size: 3rem;
+    }
+
+    .image-frame {
+        width: 240px;
+        height: 290px;
     }
     
     .projects-grid,
@@ -2476,3 +2444,57 @@ section {
 
 .hidden { display: none; }
 .visible { display: block; }
+/* ===== Décor électronique (circuit imprimé + signal) ===== */
+.hero-background::before,
+.hero-background::after {
+    content: '';
+    position: absolute;
+    width: 560px;
+    height: 420px;
+    background: url('images/circuit.svg') no-repeat center / contain;
+    opacity: 0.22;
+    pointer-events: none;
+}
+
+.hero-background::before {
+    top: 70px;
+    right: 0;
+}
+
+.hero-background::after {
+    bottom: -50px;
+    left: -110px;
+    width: 400px;
+    height: 300px;
+    opacity: 0.14;
+    transform: scale(-1, -1);
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90px;
+    background: url('images/wave.svg') repeat-x center bottom / auto 90px;
+    opacity: 0.18;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Points de soudure discrets sur certaines sections */
+.skills,
+.education {
+    background-image: radial-gradient(rgba(47, 143, 224, 0.16) 1px, transparent 1.5px);
+    background-size: 28px 28px;
+}
+
+@media (max-width: 768px) {
+    .hero-background::before,
+    .hero-background::after {
+        width: 320px;
+        height: 240px;
+        opacity: 0.15;
+    }
+}

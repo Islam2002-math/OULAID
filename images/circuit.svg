@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="560" height="420" viewBox="0 0 560 420" fill="none" stroke="#2f8fe0" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- traces -->
+  <path d="M560 40 H430 L400 70 H300 L270 100 H190"/>
+  <path d="M560 120 H470 L440 150 H380 V210 L350 240 H250"/>
+  <path d="M560 200 H520 L500 220 V300 L470 330 H330"/>
+  <path d="M560 290 H545"/>
+  <path d="M430 40 V0"/>
+  <path d="M300 70 V0"/>
+  <!-- resistor -->
+  <path d="M350 330 h-20"/>
+  <path d="M330 330 l6 -8 l10 16 l10 -16 l10 16 l10 -16 l6 8" transform="translate(-70 0)"/>
+  <!-- IC chip -->
+  <rect x="120" y="150" width="90" height="60" rx="4" fill="#ffffff"/>
+  <path d="M135 150 v-14 M155 150 v-14 M175 150 v-14 M195 150 v-14 M135 210 v14 M155 210 v14 M175 210 v14 M195 210 v14"/>
+  <circle cx="132" cy="162" r="3"/>
+  <!-- pads -->
+  <circle cx="190" cy="100" r="5" fill="#ffffff"/>
+  <circle cx="250" cy="240" r="5" fill="#ffffff"/>
+  <circle cx="330" cy="330" r="5" fill="#ffffff"/>
+  <circle cx="400" cy="70" r="3.5" fill="#2f8fe0" stroke="none"/>
+  <circle cx="380" cy="150" r="3.5" fill="#2f8fe0" stroke="none"/>
+  <circle cx="500" cy="220" r="3.5" fill="#2f8fe0" stroke="none"/>
+</svg>
