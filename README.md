@@ -1,6 +1,6 @@
 # Portfolio Web
 
-Un site web moderne et responsive qui présente mes projets, mes compétences et mes coordonnées, afin de partager mon travail et faciliter le contact.
+Un site web moderne et responsive qui présente les projets de mon ami OULAID Hocine, les compétences et les coordonnées, afin de partager le travail et faciliter le contact.
 
 ## Technologies utilisées
 - HTML
